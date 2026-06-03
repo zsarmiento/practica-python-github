@@ -48,7 +48,7 @@ while opcion != 4:
         elif opcion ==4: 
             print("ha escogido salir, gracias")
         else: 
-            print("no es una opcion del menu, vuelva a intentarlo")
+            print("no es una opcion del menu, vuelva a intentarlo seleccionando una opcion valida")
         
 
 
