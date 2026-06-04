@@ -28,12 +28,29 @@
 #     suma +=n
 #     print(f"el total de la suma es{suma}")
 
-notas = [3,5,7,2,9]
+# notas = [3,5,7,2,9]
 
-contador =0
+# contador =0
 
-for nota in notas:
-    if nota >=5:
-        contador+=1
+# for nota in notas:
+#     if nota >=5:
+#         contador+=1
 
-print(f"El total de chicos aprobados es {contador}")
+# print(f"El total de chicos aprobados es {contador}")
+
+notas=[]
+
+for i in range(3):
+    nota = float(input("ingrese una nota: "))
+    notas.append(nota)
+
+suma =0
+for n in notas:
+    suma +=n
+
+def promedio ():
+    prom = suma/len(notas)
+    print(f"el promedio es {prom}")
+
+
+promedio()
