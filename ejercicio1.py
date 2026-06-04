@@ -22,12 +22,13 @@
 
 
 opcion = 0
-while opcion != 4: 
+while opcion != 5: 
     print ("-----Menu principal-----")
     print("1. Saludar")
     print("2. Sumar dos numeros")
     print("3. Mostrar numeros del uno al 5")
-    print("4. Salir")
+    print("4. di tongeo!")
+    print("5. Salir")
 
 
     try: 
@@ -45,7 +46,10 @@ while opcion != 4:
             while conteo <=5:
                 print(conteo)
                 conteo +=1
-        elif opcion ==4: 
+
+        elif opcion ==4:
+            print("Tongeo!!")
+        elif opcion ==5: 
             print("ha escogido salir, gracias")
         else: 
             print("no es una opcion del menu, vuelva a intentarlo seleccionando una opcion valida")
