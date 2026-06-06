@@ -28,6 +28,7 @@ while opcion != 5:
     print("2. Sumar dos numeros")
     print("3. Mostrar numeros del uno al 5")
     print("4. di tongeo!")
+    print("6. saluda a vicky")
     print("5. Salir")
 
 
@@ -46,7 +47,8 @@ while opcion != 5:
             while conteo <=5:
                 print(conteo)
                 conteo +=1
-
+        elif opcion ==6:
+            print("hola vicky, como estas??")
         elif opcion ==4:
             print("Tongeo!!")
         elif opcion ==5: 
