@@ -2,10 +2,7 @@ from random import randint
 
 numero1=int(input("ingresa primer numero"))
 numero2=int(input("ingresa segundo numero"))
-
 numerojugador =randint(numero1,numero2)
-
-
 if numerojugador%2==0:
     print("el numero es par")
 else:
@@ -13,11 +10,7 @@ else:
     numerojugador+=1
     if numerojugador>numero2:
         numerojugador-=2
-
-print(f"numero jugador: {numerojugador} ")
-
 print("adivina el numero que escogi")
-
 contador =0
 adivinar = False
 while contador <=2 or adivinar== False:
@@ -27,5 +20,8 @@ while contador <=2 or adivinar== False:
         adivinar = True
         contador =3
     else:
-        print(f"tu intento es {intento} y el numero que juega es {numerojugador}")
+        if intento > numerojugador:
+            print("el numero ingresado es mayor que el que debes adivinar")
+        else:
+             print("el numero ingresado es menor que el numero que debes adivinar")
         contador+=1
