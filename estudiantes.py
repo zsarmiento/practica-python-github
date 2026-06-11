@@ -32,3 +32,20 @@ def listar_estudiantes(estudiantes):
 listar_estudiantes(estudiantes)
 crear_estudiantes(estudiantes)
 listar_estudiantes(estudiantes)
+
+def actualizar_estudiantes(estudiantes):
+    listar_estudiantes(estudiantes)
+    modificar = int(input("indique que estudiante quiere modificar: "))
+    print(f"Nombre: {estudiantes[modificar]}")
+
+    nuevo_nombre = input("ingrese el nuevo nombre: ")
+    nueva_edad = int(input("ingrese nueva edad: "))
+    nueva_carrera = input("ingrese nueva carrera: ")
+
+    estudiantes[modificar]["nombre"] = nuevo_nombre
+    estudiantes[modificar]["edad"] = nueva_edad
+    estudiantes[modificar]["curso"] = nueva_carrera
+
+    print(f"El estudiante {estudiantes[modificar]} ha sido modificado exitosamente")
+
+actualizar_estudiantes(estudiantes)
