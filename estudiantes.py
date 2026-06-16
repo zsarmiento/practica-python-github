@@ -29,10 +29,6 @@ def listar_estudiantes(estudiantes):
             print("-------------------------------------")
 
 
-listar_estudiantes(estudiantes)
-crear_estudiantes(estudiantes)
-listar_estudiantes(estudiantes)
-
 def actualizar_estudiantes(estudiantes):
     listar_estudiantes(estudiantes)
     modificar = int(input("indique que estudiante quiere modificar: "))
@@ -48,4 +44,15 @@ def actualizar_estudiantes(estudiantes):
 
     print(f"El estudiante {estudiantes[modificar]} ha sido modificado exitosamente")
 
+def eliminar_estudiantes(estudiantes):
+    listar_estudiantes(estudiantes)
+    eliminar = int(input("indique el id del estudiante a eliminar:"))
+    estudiantes.pop(eliminar) 
+
+
+listar_estudiantes(estudiantes)
+crear_estudiantes(estudiantes)
+listar_estudiantes(estudiantes)
 actualizar_estudiantes(estudiantes)
+eliminar_estudiantes(estudiantes)
+listar_estudiantes(estudiantes)
