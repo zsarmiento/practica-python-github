@@ -46,13 +46,25 @@ def actualizar_estudiantes(estudiantes):
 
 def eliminar_estudiantes(estudiantes):
     listar_estudiantes(estudiantes)
-    eliminar = int(input("indique el id del estudiante a eliminar:"))
-    estudiantes.pop(eliminar) 
+    while True: 
+        eliminar = int(input(f"ingrese id del estudiante: "))
+        confirmar = input("Esta seguro que desea eliminar el estudiante? y/n: ")
+
+        if confirmar == "y":
+            estudiantes.pop(eliminar)
+            print("El estudiante ha sido eliminado")
+            break
+
+        elif confirmar == "n": 
+            print("intentalo de nuevo")
+
+        else: 
+            print("ingresa una opcion y/n")
+
 
 
 listar_estudiantes(estudiantes)
 crear_estudiantes(estudiantes)
-listar_estudiantes(estudiantes)
 actualizar_estudiantes(estudiantes)
 eliminar_estudiantes(estudiantes)
 listar_estudiantes(estudiantes)
