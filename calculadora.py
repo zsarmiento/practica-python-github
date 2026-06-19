@@ -1,12 +1,13 @@
 # este programa es una calculadora de gastos personales
-while True: 
-    try:
-        presupuestar = float(input("Ingresa el presupuesto sin comas ni puntos: "))
-        break
-    except:
-        print("el valor ingresado debe ser un entero positivo")
+
+#variables
+
 total =0
 gastos = []
+variable = True
+
+#funciones
+
 
 def analizar_gasto(pres,gas,cat):
     calculo = (gas/pres)
@@ -20,11 +21,27 @@ def analizar_gasto(pres,gas,cat):
 def mostrar_resumen(gastw, tot):
     print("----Resumen------")
     for item in gastw:
-       print(f"{item["categoria"]}-{item["gasto"]}")
+       print(f"{item["cat"]}-{item["mont"]}")
     print(f"el total es: {tot}")    
         
+def agregar_gastos(mont,cat):
+    agregar = {
+        "mont": mont,
+        "cat": cat
+    }
+    gastos.append(agregar)
 
-variable = True
+
+#logica
+
+while True: 
+    try:
+        presupuestar = float(input("Ingresa el presupuesto sin comas ni puntos: "))
+        break
+    except:
+        print("el valor ingresado debe ser un entero positivo")
+
+
 while variable ==True: 
 
     categoria = input("Ingrese la categoria: ")
@@ -34,11 +51,7 @@ while variable ==True:
             break
         except:
             print("el gasto a ingresar debe ser un numero entero positivo")
-    gastos_nuevos = {
-        "categoria": categoria, 
-        "gasto": gasto
-    }
-    gastos.append(gastos_nuevos)
+    agregar_gastos(gasto,categoria)
     total+=gasto
     analizar_gasto(presupuestar,gasto,categoria)
     
